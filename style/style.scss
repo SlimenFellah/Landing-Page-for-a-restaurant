@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#openmenubtn {
+  background-color: white;
+}
+.hero {
+  font-family: roboto;
+  color: white;
+  .vid {
+    position: absolute;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.644);
+    z-index: -1;
+    mix-blend-mode: overlay;
+  }
+  .container {
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      .left h1 {
+        cursor: pointer;
+      }
+      .right {
+        #openmenubtn {
+          cursor: pointer;
+        }
+        #closemenubtn {
+          background-color: black;
+          cursor: pointer;
+        }
+        .menu {
+          ul {
+            li:hover {
+              cursor: pointer;
+              font-size: 1.25rem;
+              color: brown;
+              text-decoration: underline;
+            }
+          }
+        }
+        // here kan menu
+      }
+    }
+  }
+  section {
+    text-align: center;
+    padding: 1em;
+    .left {
+      h1 {
+        font-size: clamp(2.5rem, calc(1rem + 5vw), 5rem);
+        font-weight: bolder;
+        span {
+          color: brown;
+          font-weight: bolder;
+        }
+      }
+      h3 {
+        font-weight: normal;
+        font-size: clamp(1rem, calc(0.5rem + 2vw), 1.5rem);
+      }
+      button {
+        margin-top: 0.5rem;
+        color: white;
+        padding: 1em 1em;
+        background-color: brown;
+        border: none;
+        transition: 300ms linear;
+        letter-spacing: 2px;
+        cursor: pointer;
+      }
+      button:hover {
+        letter-spacing: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .active {
+    display: none;
+  }
+  .container {
+    section {
+      margin-top: 5rem;
+    }
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    background-color: white;
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    ul li {
+      list-style: none;
+      margin: 2rem;
+    }
+  }
+}
+@media (min-width: 600px) {
+  .hero {
+    .container {
+      header {
+        align-items: center;
+        .right {
+          img {
+            display: none;
+          }
+          .menu {
+            ul {
+              li {
+                margin: 0 1rem;
+                display: inline;
+              }
+            }
+          }
+        }
+      }
+      section {
+        margin-top: 5rem;
+        .left {
+          margin: auto 0;
+        }
+      }
+    }
+  }
+}

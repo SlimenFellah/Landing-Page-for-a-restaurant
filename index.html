@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Steak House</title>
+  </head>
+  <body>
+    <div class="hero">
+      <video src="Assets/video.mp4" autoplay loop muted class="vid"></video>
+      <div class="overlay"></div>
+      <div class="container">
+        <header>
+          <div class="left">
+            <h1>FOOD</h1>
+          </div>
+          <div class="right">
+            <img src="Assets/menu.svg" id="openmenubtn" alt="" />
+            <div class="menu active">
+              <ul>
+                <img src="Assets/exit.svg" id="closemenubtn" alt="" />
+                <li>Home</li>
+                <li>Search</li>
+                <li>About</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <section>
+          <div class="left">
+            <h1>
+              No sweets, <br />
+              Here is only <span>HOT!</span>
+            </h1>
+            <h3>Your hot food is ready!</h3>
+            <button class="order_button">Order now</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+  <script>
+    let openmenu = document.querySelector("#openmenubtn");
+    let closemenu = document.querySelector("#closemenubtn");
+    let menu = document.querySelector(".menu");
+    openmenu.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+    closemenu.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+</html>

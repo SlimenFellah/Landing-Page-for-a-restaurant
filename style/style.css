@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#openmenubtn {
+  background-color: white;
+}
+
+.hero {
+  font-family: roboto;
+  color: white;
+}
+
+.hero .vid {
+  position: absolute;
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero .overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.644);
+  z-index: -1;
+  mix-blend-mode: overlay;
+}
+
+.hero .container header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+}
+
+.hero .container header .left h1 {
+  cursor: pointer;
+}
+
+.hero .container header .right #openmenubtn {
+  cursor: pointer;
+}
+
+.hero .container header .right #closemenubtn {
+  background-color: black;
+  cursor: pointer;
+}
+
+.hero .container header .right .menu ul li:hover {
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: brown;
+  text-decoration: underline;
+}
+
+.hero section {
+  text-align: center;
+  padding: 1em;
+}
+
+.hero section .left h1 {
+  font-size: clamp(2.5rem, calc(1rem + 5vw), 5rem);
+  font-weight: bolder;
+}
+
+.hero section .left h1 span {
+  color: brown;
+  font-weight: bolder;
+}
+
+.hero section .left h3 {
+  font-weight: normal;
+  font-size: clamp(1rem, calc(0.5rem + 2vw), 1.5rem);
+}
+
+.hero section .left button {
+  margin-top: 0.5rem;
+  color: white;
+  padding: 1em 1em;
+  background-color: brown;
+  border: none;
+  -webkit-transition: 300ms linear;
+  transition: 300ms linear;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.hero section .left button:hover {
+  letter-spacing: 5px;
+}
+
+@media (max-width: 599px) {
+  .active {
+    display: none;
+  }
+  .container section {
+    margin-top: 5rem;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    background-color: white;
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  .menu ul li {
+    list-style: none;
+    margin: 2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .hero .container header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero .container header .right img {
+    display: none;
+  }
+  .hero .container header .right .menu ul li {
+    margin: 0 1rem;
+    display: inline;
+  }
+  .hero .container section {
+    margin-top: 5rem;
+  }
+  .hero .container section .left {
+    margin: auto 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
